@@ -1,14 +1,11 @@
-/* global describe, it */
+describe('rolldice', function(){
 
-(function () {
-    'use strict';
+  it('should roll a number between 1 and 6', function(){
 
-    describe('Give it some context', function () {
-        describe('maybe a bit more context here', function () {
-            it('should run here few assertions', function () {
-              var answer = 2;
-              expect(2).to.equal(answer);
-            });
-        });
-    });
-})();
+    var rolldice = function(){
+      diceface('6')
+    };
+
+    expect(rolldice).to.be.equal(6);
+  })
+});
