@@ -8,4 +8,14 @@ describe('rolldice', function(){
 
     expect(rolldice).to.be.equal(6);
   })
-});
+}); 
+
+describe('dicebutton', function(){
+
+  it('should roll dice when clicked', function(){
+
+    var dicebutton = function(){
+      buttonactivate('')
+    }
+  })
+})
