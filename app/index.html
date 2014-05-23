@@ -27,45 +27,58 @@
         <![endif]-->
 
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">junkjunk</h3>
+        <div class="hero-unit">
+          <h1>Roll The Dice!</h1>
+          <h2>100-sided die</h2>
+          <div class="di-container">
+            <div class="face-container face-single"></div>
+            <div class="button button-single">
+              Roll
             </div>
-
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+          </div>
+          <h2>2, 6-sided dice</h2>
+          <div class="di-container">
+            <div class="face-container face-double1"></div>
+            <div class="face-container face-double2"></div>
+            <div class="button button-double">
+              Roll
             </div>
-
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-                    <h4>Sass with Compass</h4>
-                    <p>Compass is an open-source CSS Authoring Framework that uses Sass.</p>
-
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
-                </div>
+          </div>
+          <div class="di-container choose-container">
+            <div class="face-container face-any" ></div>
+            <input type="text" class="die-sides">
+            <button class="create-die">Create Die</button>
+            <div class="button button-any">
+              Roll
             </div>
-
-            <div class="footer">
-                <p>♥ from the Yeoman team</p>
-            </div>
-
+          </div>
         </div>
+
+        <div id="tridiv">
+          <div class="scene" style="-webkit-transform:rotateX(154deg) rotateY(-390deg); -moz-transform:rotateX(154deg) rotateY(-390deg); -ms-transform:rotateX(154deg) rotateY(-390deg); transform:rotateX(154deg) rotateY(-390deg); ">
+            <div class="shape cuboid-1 cub-1">
+              <div class="face ft">
+                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.0431373);"></div>
+              </div>
+              <div class="face bk">
+                <div class="photon-shader" style="background-color: rgba(255, 255, 255, 0.0431373);"></div>
+              </div>
+              <div class="face rt">
+                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.0431373);"></div>
+              </div>
+              <div class="face lt">
+                <div class="photon-shader" style="background-color: rgba(255, 255, 255, 0.0431373);"></div>
+              </div>
+              <div class="face bm">
+                <div class="photon-shader" style="background-color: rgba(255, 255, 255, 0.0980392);"></div>
+              </div>
+              <div class="face tp">
+                <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.0980392);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
 
         <!-- build:js scripts/vendor.js -->

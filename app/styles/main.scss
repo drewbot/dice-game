@@ -1,6 +1,217 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-
 @import 'sass-bootstrap/lib/bootstrap';
+
+// bower:scss
+// endbower
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 380px;
+    font-size: 18px;
+    font-weight: 200px;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 30px 60px 60px 60px;
+    h1 {
+        margin-bottom: 40px;
+        font-size: 40px;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+}
+
+.di-container {
+    position: relative;
+    margin-bottom: 40px;
+    height: 120px;
+    width: 260px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.choose-container {
+    height: 220px;
+}
+
+.face-container {
+    padding: 20px 0 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.face-double1 {
+    position: absolute;
+    display: inline-block;
+    left: 80px;
+}
+
+.face-double2 {
+    position: absolute;
+    display: inline-block;
+    right: 80px;
+}
+
+
+.button {
+    position: absolute;
+    bottom: 20px;
+    right: 70px;
+    height: 30px;
+    width: 120px;
+    background-color: darkgrey;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+
+    &:hover {
+        background-color: grey;
+        cursor: pointer;
+    }
+}
+
+
+
+/* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ 
+#tridiv {
+  perspective: 800px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 100%;
+}
+.face {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 50%;
+  left: 50%;
+  margin: -40em 0 0 -40em;
+}
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+}
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+/* .cub-1 styles */
+.cub-1 {
+  transform:translate3D(-2.125em, 0.8125em, -3.5625em) rotateX(-75deg) rotateY(90deg) rotateZ(0deg);
+  opacity:1;
+  width:8em;
+  height:8em;
+  margin:-4em 0 0 -4em;
+}
+.cub-1 .ft {
+  transform:translateZ(4em);
+}
+.cub-1 .bk {
+  transform:translateZ(-4em) rotateY(180deg);
+}
+.cub-1 .rt, .cub-1 .lt {
+  width:8em;
+  height:8em;
+}
+.cub-1 .tp, .cub-1 .bm {
+  width:8em;
+  height:8em;
+}
+.cub-1 .face {
+  background-color:#FFFFFF  ;
+}
+.cub-1 .ft {
+  background:url(http://4.bp.blogspot.com/-zn4MXkJ_C-g/Tfz10QuYhrI/AAAAAAAAAEU/HJZklt4M7Ys/s200/Dice4.jpg) #FFFFFF  ;
+}
+.cub-1 .bk {
+  background:url(http://4.bp.blogspot.com/-QHxGKMUT5MQ/Tfz104LKZ5I/AAAAAAAAAEc/2S9KnPfk24A/s200/Dice5.jpg) #FFFFFF  ;
+}
+.cub-1 .tp {
+  background:url(http://2.bp.blogspot.com/-MDwUocciFLY/Tfz1y6TE0MI/AAAAAAAAAD8/gIcj4HsZFWY/s200/Dice1.jpg) #FFFFFF  ;
+}
+.cub-1 .bm {
+  background:url(http://www.clipartbest.com/cliparts/niE/GAq/niEGAq9iA.jpeg) #FFFFFF  ;
+}
+.cub-1 .lt {
+  background:url(http://3.bp.blogspot.com/-ly5UXkR-lcg/Tfz1zgfO0GI/AAAAAAAAAEE/7Cx78huP0Kk/s200/Dice2.jpg) #FFFFFF  ;
+}
+.cub-1 .rt {
+  background:url(http://2.bp.blogspot.com/-zIzHdd_e3IM/Tfz1z_GQU7I/AAAAAAAAAEM/lxVTCfAe1Hw/s200/Dice3.jpg) #FFFFFF  ;
+}
+
+
+
+
+
+/* Browse Happy */
 
 .browsehappy {
     margin: 0.2em 0;
@@ -9,83 +220,3 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-    }
-}
-
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
-    }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
-}
