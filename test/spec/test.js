@@ -1,6 +1,6 @@
 describe('rolldice', function(){
 
-  var dicesides = '1 2 3 4 5 6';
+  var dicesides = '6';
 
   it('should have six sides', function(){
 
@@ -12,6 +12,8 @@ describe('rolldice', function(){
 //This test is testing to make sure that the dice have six sides, if they in fact have six sides//
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 describe('rollbutton', function(){
 
@@ -55,7 +57,7 @@ describe('snakeeyes', function(){
     var answer = snakeeyes(1, 1);
     expect(answer).to.include(doubleones);
   })
-};
+});
 
 //This test is testing to make sure that a roll of snakeeyes will result in a html dialogue and a free turn//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -162,3 +164,9 @@ describe('positiveonly', function(){
     expect(answer).to.be(positive);
   })
 });
+
+
+
+
+
+
