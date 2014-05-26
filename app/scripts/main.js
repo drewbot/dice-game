@@ -12,8 +12,9 @@ $('.button-single').click(function(){
   rollDice(100);
   $('.roller').toggleClass('roller-spin');
   $('.roller2').toggleClass('roller-spin');
+  
 });
-
+  
 // Two at a time
 
 var rollDiceDouble = function(x) {
@@ -59,6 +60,11 @@ $('.button-any').click(function(){
   $('.roller').toggleClass('roller-spin');
   $('.roller2').toggleClass('roller-spin');
 });
+
+
+
+
+
 
   
 
