@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="bower_components/mocha/mocha.css">
 </head>
 <body>
+
+
+
     <div id="mocha"></div>
     <script src="bower_components/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
@@ -18,9 +21,10 @@
     </script>
 
     <!-- include source files here... -->
-
+     <script src="bower_components/jquery/jquery.js"></script>
     <!-- include spec files here... -->
     <script src="spec/test.js"></script>
+   
 
     <script>window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run()</script>
 </body>
