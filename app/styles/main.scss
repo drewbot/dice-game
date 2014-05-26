@@ -4,23 +4,26 @@
 // endbower
 
 body {
-    background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQCwxuVisXG4b4weP1XaBmp_DDr4KvERWAR7PSUCOTRS_G8eaz9);
+    background-image: url('http://godaddycasino.com/images/green-pattern-wallpapers-backgrounds-for-powerpoint%5B1%5D%20-%20Copy.jpg');
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #CCFF00;
 }
 
 .hero-unit {
-    margin: 50px auto 0 auto;
-    width: 380px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    padding: 40px;
+    width: 400px;
     font-size: 18px;
     font-weight: 200px;
     color: #FFFFCC;
     text-shadow: 3px 3px 3px black;
     line-height: 30px;
-    background-image: url(http://2.bp.blogspot.com/-8OHNXeVlgAY/UEWeW7kAzuI/AAAAAAAADVo/83-Ck2fMx0M/s1600/Red-Curtain-Background.jpg);
-    border-radius: 10px;
-    border: 5px solid black;
+    background-image: url('http://grungetextures.com/sample/987/bright-red-grunge-background.jpg');
+    border-radius: 20px;
+    border: 11px solid #2B1409;
     padding: 30px 60px 60px 60px;
+    box-shadow: 4px 4px 10px #000000;
     h1 {
         margin-bottom: 40px;
         font-size: 40px;
@@ -34,12 +37,15 @@ body {
 
 .di-container {
     position: relative;
+    text-align: center;
     margin-bottom: 40px;
     height: 120px;
     width: 260px;
-    background: black;
-    border: 5px solid black;
-    border-radius: 8px;
+    background-image: url('http://www.vbcbloomfield.com/images/background_maroon.jpg');
+    background-size: cover;
+    border: 6px solid #660500;
+    border-radius: 11px;
+    box-shadow: 0px 0px 10px #540400;
 }
 
 .choose-container {
@@ -49,7 +55,7 @@ body {
 .face-container {
     padding: 20px 0 20px 0;
     font-size: 24px;
-    color: #FFFF33;
+    color: #E39F00;
     font-weight: bold;
     text-align: center;
 }
@@ -74,45 +80,51 @@ body {
     right: 60px;
     height: 40px;
     width: 125px;
-    background: rgb(92, 228, 222);
+    background-color: #111111;
     border-radius: 8px;
-    font-size: 26px;
+    font-size: 21px;
     font-weight: bolder;  
     text-shadow: 3px 3px 3px black;
     box-shadow: inset -1px -3px 6px black;
-    color: white;
+    color: #E39F00;
     text-align: center;
 
     &:hover {
         margin-top: 8px;
-        height: 37px;
+        height: 39px;
         cursor: pointer;
-        box-shadow: inset 0px -3px 0px rgb(58, 166, 132);
+        box-shadow: inset 0px -3px 0px #000000;
       
     }
 
     &:active {
       height: 34px;
       margin-top: 11px;
-      box-shadow: inset 0px 3px 0px rgb(58, 166, 132);
+      box-shadow: inset 0px 3px 0px #000000;
     }
 }
 
 .create-die {
-  color: white;
-  background-color: red;
-  width: 150px;
+  color: #E39F00;
+  background-color: #111111;
+  width: 219px;
+  font-weight: bolder;
   position: relative;
-  left: 52px;
-  margin-top: 20px;
+  left: 2px;
+  margin-top: 5px;
+  border: 2px solid black;
+  border-radius: 8px;
 }
 
 .die-sides {
+  margin: 0 auto;
+  text-align: center;
   background-color: #FFFFCC;
   font-weight: bolder;
   border: 2px solid black;
+  border-radius: 8px;
   position: relative;
-  left: 15px;
+  left: 2px;
 }
 
 
