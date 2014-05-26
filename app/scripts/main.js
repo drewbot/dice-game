@@ -1,5 +1,3 @@
-
-
 //Store a function as a variable which will generate a number between one and x
 //x to be specified in future use of the function
 var rollDice = function(x) {
@@ -10,10 +8,14 @@ var rollDice = function(x) {
 }
 
 //When this button is clicked a random number will be generated and appended to the face-single div
+
 $('.button-single').click(function(){
   rollDice(100);
+  $('.roller').toggleClass('roller-spin');
+  $('.roller2').toggleClass('roller-spin');
+  
 });
-
+  
 // Two at a time
 
 var rollDiceDouble = function(x) {
@@ -32,6 +34,8 @@ var rollDiceDouble2 = function(x) {
 $('.button-double').click(function(){
   rollDiceDouble(6);
   rollDiceDouble2(6);
+  $('.roller').toggleClass('roller-spin');
+  $('.roller2').toggleClass('roller-spin');
 });
 
 
@@ -61,12 +65,6 @@ $('.button-any').click(function(){
 $('.button-cube').click(function(){
   $('.tridiv').toggleClass('cube-roll');
 });
-
-
-
-
-
-
 
 
 
