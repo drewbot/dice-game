@@ -4,7 +4,7 @@
 // endbower
 
 body {
-    background: #CC3300;
+    background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQCwxuVisXG4b4weP1XaBmp_DDr4KvERWAR7PSUCOTRS_G8eaz9);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #CCFF00;
 }
@@ -17,8 +17,8 @@ body {
     color: #FFFFCC;
     text-shadow: 3px 3px 3px black;
     line-height: 30px;
-    background-color: #66FF00;
-    border-radius: 8px;
+    background-image: url(http://2.bp.blogspot.com/-8OHNXeVlgAY/UEWeW7kAzuI/AAAAAAAADVo/83-Ck2fMx0M/s1600/Red-Curtain-Background.jpg);
+    border-radius: 10px;
     border: 5px solid black;
     padding: 30px 60px 60px 60px;
     h1 {
@@ -26,7 +26,7 @@ body {
         font-size: 40px;
         line-height: 1;
         letter-spacing: -1px;
-        font-family: fantasy;
+        
 
 
     }
@@ -37,9 +37,9 @@ body {
     margin-bottom: 40px;
     height: 120px;
     width: 260px;
-    background-color: #3300FF;
+    background: black;
     border: 5px solid black;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .choose-container {
@@ -260,15 +260,6 @@ body {
     padding: 0.2em 0;
 }
 
-.roller {
-    height: 220px;
-    width: 220px;
-    position: fixed;
-    margin: 0 auto;
-    float: left;
-    top: 40px;
-}
-
 @-webkit-keyframes rotate {
     from {
         -webkit-transform: rotate(0deg);
@@ -278,12 +269,36 @@ body {
     }
 }
 
+@-webkit-keyframes rotate-again {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+
+.roller {
+    height: 220px;
+    width: 220px;
+    position: fixed;
+    margin: 0 auto;
+    float: left;
+    top: 40px;
+    -webkit-animation-name: rotate-again; 
+    -webkit-animation-duration: 1.5s; 
+    -webkit-animation-iteration-count: 3s;
+    -webkit-animation-timing-function: linear;
+}
+
 .roller-spin {
     -webkit-animation-name: rotate; 
     -webkit-animation-duration: 1.5s; 
     -webkit-animation-iteration-count: 3s;
     -webkit-animation-timing-function: linear;
-}
+} 
 
 .roller2 {
   height: 220px;
@@ -293,18 +308,13 @@ body {
   float: right;
   top: 40px;
   right: 243px;
+  -webkit-animation-name: rotate-again; 
+  -webkit-animation-duration: 1.5s; 
+  -webkit-animation-iteration-count: 3s;
+  -webkit-animation-timing-function: linear;
 }
 
-@-webkit-keyframes rotate {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to { 
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-.roller2.spin {
+.roller-spin2 {
     -webkit-animation-name: rotate; 
     -webkit-animation-duration: 1.5s; 
     -webkit-animation-iteration-count: 3s;
