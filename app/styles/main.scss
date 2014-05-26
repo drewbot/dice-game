@@ -4,9 +4,9 @@
 // endbower
 
 body {
-    background: #fafafa;
+    background: #CC3300;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    color: #CCFF00;
 }
 
 .hero-unit {
@@ -14,9 +14,12 @@ body {
     width: 380px;
     font-size: 18px;
     font-weight: 200px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
     line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
+    background-color: #66FF00;
+    border-radius: 8px;
+    border: 5px solid black;
     padding: 30px 60px 60px 60px;
     h1 {
         margin-bottom: 40px;
@@ -31,7 +34,8 @@ body {
     margin-bottom: 40px;
     height: 120px;
     width: 260px;
-    background-color: white;
+    background-color: #3300FF;
+    border: 5px solid black;
     border-radius: 4px;
 }
 
@@ -42,6 +46,7 @@ body {
 .face-container {
     padding: 20px 0 20px 0;
     font-size: 24px;
+    color: #FFFF33;
     font-weight: bold;
     text-align: center;
 }
@@ -60,20 +65,32 @@ body {
 
 
 .button {
+    margin: 5px;
     position: absolute;
-    bottom: 20px;
-    right: 70px;
-    height: 30px;
-    width: 120px;
-    background-color: darkgrey;
-    border-radius: 4px;
-    font-size: 16px;
+    bottom: 10px;
+    right: 60px;
+    height: 40px;
+    width: 125px;
+    background: rgb(92, 228, 222);
+    border-radius: 8px;
+    font-size: 26px;
+    font-weight: bolder;  
+    text-shadow: 3px 3px 3px black;
+    box-shadow: inset -1px -3px 6px black;
     color: white;
     text-align: center;
 
     &:hover {
-        background-color: grey;
+        margin-top: 8px;
+        height: 37px;
         cursor: pointer;
+        box-shadow: inset 0px -3px 0px rgb(58, 166, 132);
+    }
+
+    &:active {
+      height: 34px;
+      margin-top: 11px;
+      box-shadow: inset 0px 3px 0px rgb(58, 166, 132);
     }
 }
 
@@ -218,5 +235,22 @@ body {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+.roller {
+    height: 220px;
+    width: 220px;
+    position: relative;
+    margin: 0 auto;
+    float: left;
+    top: 40px;
+
+}
+
+.rollerbar {
+    padding-left: 240px;
+    width: 520px;
+    height: 980px;
+    float: left;
 }
 
