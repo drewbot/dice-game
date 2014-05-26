@@ -79,6 +79,26 @@ body {
 
 
 
+//3D Die
+
+.cube-container {
+    position: relative;
+    margin-bottom: 40px;
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+//Trying to flip the cube
+.cube-roll{
+    transition: -webkit-transform .4s ease-in;
+        -webkit-transform-style: preserve-3d;
+        animation-iteration-count: infinite;
+        -webkit-transform: rotateY(-1turn);
+}
+
+
 /* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ 
 #tridiv {
   perspective: 800px;
@@ -206,6 +226,8 @@ body {
 .cub-1 .rt {
   background:url(http://2.bp.blogspot.com/-zIzHdd_e3IM/Tfz1z_GQU7I/AAAAAAAAAEM/lxVTCfAe1Hw/s200/Dice3.jpg) #FFFFFF  ;
 }
+
+
 
 
 

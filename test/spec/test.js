@@ -13,7 +13,9 @@
     // });
 
 
-    
+
+//Create a die Unit-Tests
+
     describe("Create Die Button", function(){
  
       // set input vaue to 7
@@ -57,11 +59,33 @@
     })
 
 
+//100-Sided Die Unit-Tests
+
+	describe("Roll 100-Sided Die Button", function(){
+
+	  $('.button-single').click();
+ 
+      it("should use the rollDice function to return a random number", function(){        
+        expect($('.button-single')).to.throw(rollDice);
+      });
+
+      it("should add the returned number to the face-single div", function(){        
+        expect($('.face-single')).to.equal(rollDice.randomNumber);
+      });
+ 
+    });
+
+	describe("rollDice function", function(){
+
+	  it("should return a random number between 1 and 100", function(){        
+        expect(rollDice.randomNumber).to.be.within(1,100);
+      });
+
+	  it("should have a property of random number", function(){
+	    expect(rollDice).to.have.property('randomNumber');
+	  });
+
+	});
 
 
-
-
-
-
-    
 })();

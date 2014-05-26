@@ -56,6 +56,14 @@ $('.button-any').click(function(){
 });
 
 
+//Trying to flip the cube
+$('.button-cube').click(function(){
+  $('.tridiv').toggleClass('cube-roll');
+});
+
+
+
+
 
 
 
