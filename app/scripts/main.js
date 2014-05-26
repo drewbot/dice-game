@@ -6,6 +6,7 @@ var rollDice = function(x) {
   var randomNumber = Math.floor(Math.random() * x + 1);
   $('.face-single').text(randomNumber);
   console.log(randomNumber);
+  return randomNumber;
 }
 
 //When this button is clicked a random number will be generated and appended to the face-single div
