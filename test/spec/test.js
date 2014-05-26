@@ -1,172 +1,86 @@
-describe('rolldice', function(){
+/* global describe, it */
 
-  var dicesides = '6';
+(function() {
+  'use strict';
 
-  it('should have six sides', function(){
+  // describe('Give it some context', function () {
+  //     describe('maybe a bit more context here', function () {
+  //         it('should run here few assertions', function () {
+  //           var answer = 2;
+  //           expect(2).to.equal(answer);
+  //         });
+  //     });
+  // });
 
-    var answer = rolldice(6);
-    expect(answer).to.equal(dicesides);
+
+
+  //Create a die Unit-Tests
+
+  describe("Create Die Button", function() {
+
+    // set input vaue to 7
+    $('.die-sides').val('7');
+    // then click the button
+    $('.create-die').click();
+
+    it("should create a die and store it in the gameDie global", function() {
+      expect(gameDie.sides).to.equal(7);
+    });
+
+    it("should create a die with sides equal the input value", function() {
+      var inputVal = parseInt($('.die-sides').val())
+      expect(gameDie.sides).to.equal(inputVal);
+    });
+
+  });
+
+  describe("Die Constructor", function() {
+
+    it("should impart a sides property to instances", function() {
+      var die = new Die(900);
+      expect(die).to.have.property('sides');
+    });
+
+    it("should accept a number or a number as a string as its argument", function() {
+      var die = new Die('7');
+      expect(die.sides).to.equal(7);
+    })
+
+    describe("imparts a roll function", function() {
+      it("that returns between its min and max values", function() {
+        var die = new Die('7');
+
+        for (var i = 0; i < 1000; i += 1) {
+          expect(die.roll()).to.be.within(1, 7);
+        }
+      })
+    })
+
   })
-});
-
-//This test is testing to make sure that the dice have six sides, if they in fact have six sides//
-//////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+  //100-Sided Die Unit-Tests
 
-describe('rollbutton', function(){
+  describe("Roll 100-Sided Die Button", function() {
 
-  var buttonfunction = true;
+    $('.button-single').click();
 
-  it('should roll the dice when the button is clicked', function(){
+    it("should add the returned number to the face-single div", function() {
+      expect(parseInt($('.face-single').text())).to.be.within(1, 100);
+    });
+  });
 
-    var answer = rollbutton(true);
-    expect(answer).to.be(buttonfuction);
-  })
-});
+  describe("rollDice function", function() {
 
+    rollDice(50);
 
-//This test is testing to make sure that the roll button makes the dice roll when clicked//
-////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////
+    // it("should run a default value if no arguement is passed")
 
-describe('activaterandom', function(){
+    it("should return a random number between 1 and 100", function() {
+      expect(rollDice(50)).to.be.within(1, 50);
+    });
 
-  var mixitup = true;
-
-  it('should activate the random number generator when the roll button is clicked', function(){
-
-    var answer = activaterandom(true);
-    expect(answer).to.be(mixitup);
-  })
-});
-
-//This test is testing to make sure the "roll" click buttom activated the random number generator
-/////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////
+  });
 
 
-
-describe('snakeeyes', function(){
-
-  var doubleones = ('You Rolled Snake Eyes! Roll Again!');
-
-  it('should display a free turn dialogue is snake eyes are rolled', function(){
-
-    var answer = snakeeyes(1, 1);
-    expect(answer).to.include(doubleones);
-  })
-});
-
-//This test is testing to make sure that a roll of snakeeyes will result in a html dialogue and a free turn//
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-describe('rolldoubles', function(){
-
-  var doubles = ('You Rolled Doubles! Double Points Awarded');
-
-  it('should display a double points dialogue for rolling doubles', function(){
-
-    var answer = rolldoubles('');
-    expect(answer).to.include(doubles);
-  })
-});
-
-//This test is testing to make sure that a roll of doubles will result in a html dialogue and double points//
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-describe('threeofakind', function(){
-
-  var triples = ('Your Rolled Triples! Triple Points Awarded');
-
-  it('should display a triple points dialogue for rolling triples', function(){
-
-    var answer = threeofakind('');
-    expect(answer).to.include(triples);
-  })
-});
-
-//This test is testing to make sure that a roll of triples will result in a html dialogue and triple points//
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-describe('choosedie', function(){
-
-  var selectdie = (true);
-
-  it('should select the associated die when clicked', function(){
-
-    var answer = choosedie(true);
-    expect(answer).to.satisfy(selectdie);
-  })
-});
-
-//This test is test to make sure that when clicked, the associated die will be selected//
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-describe('changeonlyone', function(){
-
-  var oneaction = (true);
-
-  it('should not affect other die when clicked and only have affect on itself', function(){
-
-    var answer = changeonlyone(true);
-    expect(answer).to.satisfy(oneaction);
-  })
-});
-
-//This test is to test and make sure that the click function on a die has no affect on other die or elements//
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-describe('randominator', function(){
-
-  var nosequence = ('');
-
-  it('should pass the associated number through the random number generator', function(){
-
-    var answer = randominator('');
-    expect(answer).to.be(nosequence);
-  })
-});
-
-//This test is checking to make sure that the associated number is passed through the random number generator//
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-describe('wholenumber', function(){
-
-  var mustbewhole = (true);
-
-  it('should always return a whole number when the dice are rolled', function(){
-
-    var answer = wholenumber(true);
-    expect(answer).to.be(mustbewhole);
-  })
-});
-
-//This test is checking to make sure that the random number is always a whole number//
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-describe('positiveonly', function(){
-
-  var positive = (true);
-
-  it('should always return a positive number when the dice are rolled', function(){
-
-    var answer = positiveonly(true);
-    expect(answer).to.be(positive);
-  })
-});
-
-
-
-
-
-
+})();

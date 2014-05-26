@@ -181,6 +181,7 @@ body {
 [class*="cuboid"] .ft, [class*="cuboid"] .bk {
   width: 100%;
   height: 100%;
+
 }
 [class*="cuboid"] .bk {
   left: 100%;
@@ -263,7 +264,7 @@ body {
 .roller {
     height: 220px;
     width: 220px;
-    position: relative;
+    position: fixed;
     margin: 0 auto;
     float: left;
     top: 40px;
@@ -288,10 +289,11 @@ body {
 .roller2 {
   height: 220px;
   width: 220px;
-  position: relative;
+  position: fixed;
   margin: 0 auto;
   float: right;
   top: 40px;
+  right: 243px;
 }
 
 @-webkit-keyframes rotate {
