@@ -4,52 +4,56 @@
 // endbower
 
 body {
-    background: #CC3300;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url('http://godaddycasino.com/images/green-pattern-wallpapers-backgrounds-for-powerpoint%5B1%5D%20-%20Copy.jpg');
+    font-family: 'Open Sans', sans-serif;
     color: #CCFF00;
 }
 
 .hero-unit {
-    margin: 50px auto 0 auto;
-    width: 380px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    padding: 40px;
+    width: 400px;
     font-size: 18px;
-    font-weight: 200px;
+    font-weight: 600;
     color: #FFFFCC;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 2px 1px 3px black;
     line-height: 30px;
-    background-color: #66FF00;
-    border-radius: 8px;
-    border: 5px solid black;
+    background-image: url('http://grungetextures.com/sample/987/bright-red-grunge-background.jpg');
+    border-radius: 20px;
+    border: 11px solid #2B1409;
     padding: 30px 60px 60px 60px;
+    box-shadow: 2px 2px 2px #000000;
     h1 {
         margin-bottom: 40px;
-        font-size: 40px;
+        font-family: 'Lobster', cursive;
+        font-size: 48px;
+        color: #FFFFFF;
         line-height: 1;
-        letter-spacing: -1px;
-        font-family: fantasy;
-
-
     }
 }
 
 .di-container {
     position: relative;
+    text-align: center;
     margin-bottom: 40px;
     height: 120px;
     width: 260px;
-    background-color: #3300FF;
-    border: 5px solid black;
-    border-radius: 4px;
+    background-image: url('http://www.vbcbloomfield.com/images/background_maroon.jpg');
+    background-size: cover;
+    border: 6px solid #660500;
+    border-radius: 11px;
+    box-shadow: 0px 0px 10px #540400;
 }
 
 .choose-container {
-    height: 280px;
+    height: 230px;
 }
 
 .face-container {
     padding: 20px 0 20px 0;
     font-size: 24px;
-    color: #FFFF33;
+    color: #E39F00;
     font-weight: bold;
     text-align: center;
 }
@@ -74,50 +78,53 @@ body {
     right: 60px;
     height: 40px;
     width: 125px;
-    background: rgb(92, 228, 222);
+    background-color: #920000;
     border-radius: 8px;
-    font-size: 26px;
-    font-weight: bolder;  
+    font-size: 21px;
+    font-weight: 600;  
     text-shadow: 3px 3px 3px black;
     box-shadow: inset -1px -3px 6px black;
-    color: white;
+    color: #E39F00;
     text-align: center;
 
     &:hover {
         margin-top: 8px;
-        height: 37px;
+        height: 39px;
         cursor: pointer;
-        box-shadow: inset 0px -3px 0px rgb(58, 166, 132);
+        box-shadow: inset 0px -3px 0px #000000;
       
     }
 
     &:active {
       height: 34px;
       margin-top: 11px;
-      box-shadow: inset 0px 3px 0px rgb(58, 166, 132);
+      box-shadow: inset 0px 3px 0px #000000;
     }
 }
 
 .create-die {
-  color: white;
-  background-color: red;
-  width: 150px;
-  position: relative;
-  left: 52px;
-  margin-top: 20px;
+  position: absolute;
+  left: 17px;
+  top: 122px;
+  width: 219px;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: #E39F00;
+  background-color: #4A0202;
+  font-weight: 600;
 }
 
 .die-sides {
+  position: absolute;
+  left: 15px;
+  top: 80px;
+  width: 222px;
+  text-align: center;
   background-color: #FFFFCC;
   font-weight: bolder;
-  border: 2px solid black;
-  position: relative;
-  left: 15px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
-
-
-
-
 
 /* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ 
 #tridiv {
@@ -181,7 +188,6 @@ body {
 [class*="cuboid"] .ft, [class*="cuboid"] .bk {
   width: 100%;
   height: 100%;
-
 }
 [class*="cuboid"] .bk {
   left: 100%;
@@ -248,43 +254,54 @@ body {
   background:url(http://2.bp.blogspot.com/-zIzHdd_e3IM/Tfz1z_GQU7I/AAAAAAAAAEM/lxVTCfAe1Hw/s200/Dice3.jpg) #FFFFFF  ;
 }
 
-
-
-
-
-/* Browse Happy */
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-.roller {
-    height: 220px;
-    width: 220px;
-    position: fixed;
-    margin: 0 auto;
-    float: left;
-    top: 40px;
-}
+//Cubes rotate
 
 @-webkit-keyframes rotate {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to { 
-        -webkit-transform: rotate(360deg);
-    }
+  from {
+    -webkit-transform:/*translate3D()*/ rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  to {
+    -webkit-transform:/*translate3D()*/ rotateX(180deg) rotateY(360deg) rotateZ(-360deg);
+  }
+}
+
+@-webkit-keyframes rotate-again {
+  from {
+    -webkit-transform:/*translate3D()*/ rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  to {
+    -webkit-transform:/*translate3D()*/ rotateX(180deg) rotateY(-360deg) rotateZ(360deg);
+  }
+}
+
+.cub-1 {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
 }
 
 .roller-spin {
-    -webkit-animation-name: rotate; 
-    -webkit-animation-duration: 1.5s; 
-    -webkit-animation-iteration-count: 3s;
-    -webkit-animation-timing-function: linear;
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation-name: rotate-again;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
 }
+
+//Cubes container
+
+.roller {
+  height: 220px;
+  width: 220px;
+  position: fixed;
+  margin: 0 auto;
+  float: left;
+  top: 40px;
+} 
 
 .roller2 {
   height: 220px;
@@ -296,35 +313,26 @@ body {
   right: 243px;
 }
 
-@-webkit-keyframes rotate {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to { 
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-.roller2.spin {
-    -webkit-animation-name: rotate; 
-    -webkit-animation-duration: 1.5s; 
-    -webkit-animation-iteration-count: 3s;
-    -webkit-animation-timing-function: linear;
-}
-
-
-
 .rollerbar {
-    padding-left: 240px;
-    width: 520px;
-    height: 980px;
-    float: left;
+  padding-left: 240px;
+  width: 400px;
+  height: 980px;
+  float: left;
 }
 
 .rollerbar2 {
   float: right;
-  width: 520px;
+  width: 400px;
   height: 980px;
   padding-right: 240px;
 }
 
+
+/* Browse Happy */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
