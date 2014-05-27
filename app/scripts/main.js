@@ -4,14 +4,14 @@ var rollDice = function(x) {
   var randomNumber = Math.floor(Math.random() * x + 1);
   $('.face-single').text(randomNumber);
   console.log(randomNumber);
+  return randomNumber
 }
 
 //When this button is clicked a random number will be generated and appended to the face-single div
 
 $('.button-single').click(function(){
-  $('.roller').toggleClass('roller-spin');
-  $('.roller2').toggleClass('roller-spin2');
   rollDice(100);
+  $('.cub-1').toggleClass('roller-spin');
 });
   
 // Two at a time
@@ -32,8 +32,7 @@ var rollDiceDouble2 = function(x) {
 $('.button-double').click(function(){
   rollDiceDouble(6);
   rollDiceDouble2(6);
-  $('.roller').toggleClass('roller-spin');
-  $('.roller2').toggleClass('roller-spin2');
+  $('.cub-1').toggleClass('roller-spin');
 });
 
 
@@ -56,8 +55,7 @@ $('.create-die').click(function(){
 
 $('.button-any').click(function(){
   $('.face-any').text(gameDie.roll());
-  $('.roller').toggleClass('roller-spin');
-  $('.roller2').toggleClass('roller-spin2');
+  $('.cub-1').toggleClass('roller-spin');
 });
 
 

@@ -5,7 +5,7 @@
 
 body {
     background-image: url('http://godaddycasino.com/images/green-pattern-wallpapers-backgrounds-for-powerpoint%5B1%5D%20-%20Copy.jpg');
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #CCFF00;
 }
 
@@ -15,23 +15,21 @@ body {
     padding: 40px;
     width: 400px;
     font-size: 18px;
-    font-weight: 200px;
+    font-weight: 600;
     color: #FFFFCC;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 2px 1px 3px black;
     line-height: 30px;
     background-image: url('http://grungetextures.com/sample/987/bright-red-grunge-background.jpg');
     border-radius: 20px;
     border: 11px solid #2B1409;
     padding: 30px 60px 60px 60px;
-    box-shadow: 4px 4px 10px #000000;
+    box-shadow: 2px 2px 2px #000000;
     h1 {
         margin-bottom: 40px;
-        font-size: 40px;
+        font-family: 'Lobster', cursive;
+        font-size: 48px;
+        color: #FFFFFF;
         line-height: 1;
-        letter-spacing: -1px;
-        
-
-
     }
 }
 
@@ -49,7 +47,7 @@ body {
 }
 
 .choose-container {
-    height: 280px;
+    height: 230px;
 }
 
 .face-container {
@@ -80,10 +78,10 @@ body {
     right: 60px;
     height: 40px;
     width: 125px;
-    background-color: #111111;
+    background-color: #920000;
     border-radius: 8px;
     font-size: 21px;
-    font-weight: bolder;  
+    font-weight: 600;  
     text-shadow: 3px 3px 3px black;
     box-shadow: inset -1px -3px 6px black;
     color: #E39F00;
@@ -105,31 +103,28 @@ body {
 }
 
 .create-die {
-  color: #E39F00;
-  background-color: #111111;
+  position: absolute;
+  left: 17px;
+  top: 122px;
   width: 219px;
-  font-weight: bolder;
-  position: relative;
-  left: 2 px;
-  margin-top: 5px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 8px;
+  color: #E39F00;
+  background-color: #4A0202;
+  font-weight: 600;
 }
 
 .die-sides {
-  margin: 0 auto;
+  position: absolute;
+  left: 15px;
+  top: 80px;
+  width: 222px;
   text-align: center;
   background-color: #FFFFCC;
   font-weight: bolder;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 8px;
-  position: relative;
-  left: 2px;
 }
-
-
-
-
 
 /* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ 
 #tridiv {
@@ -259,57 +254,53 @@ body {
   background:url(http://2.bp.blogspot.com/-zIzHdd_e3IM/Tfz1z_GQU7I/AAAAAAAAAEM/lxVTCfAe1Hw/s200/Dice3.jpg) #FFFFFF  ;
 }
 
-
-
-
-
-/* Browse Happy */
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+//Cubes rotate
 
 @-webkit-keyframes rotate {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to { 
-        -webkit-transform: rotate(360deg);
-    }
+  from {
+    -webkit-transform:/*translate3D()*/ rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  to {
+    -webkit-transform:/*translate3D()*/ rotateX(180deg) rotateY(360deg) rotateZ(-360deg);
+  }
 }
 
 @-webkit-keyframes rotate-again {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to { 
-        -webkit-transform: rotate(360deg);
-    }
+  from {
+    -webkit-transform:/*translate3D()*/ rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  to {
+    -webkit-transform:/*translate3D()*/ rotateX(180deg) rotateY(-360deg) rotateZ(360deg);
+  }
 }
 
-
-
-.roller {
-    height: 220px;
-    width: 220px;
-    position: fixed;
-    margin: 0 auto;
-    float: left;
-    top: 40px;
-    -webkit-animation-name: rotate-again; 
-    -webkit-animation-duration: 1.5s; 
-    -webkit-animation-iteration-count: 3s;
-    -webkit-animation-timing-function: linear;
+.cub-1 {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
 }
 
 .roller-spin {
-    -webkit-animation-name: rotate; 
-    -webkit-animation-duration: 1.5s; 
-    -webkit-animation-iteration-count: 3s;
-    -webkit-animation-timing-function: linear;
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation-name: rotate-again;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+}
+
+//Cubes container
+
+.roller {
+  height: 220px;
+  width: 220px;
+  position: fixed;
+  margin: 0 auto;
+  float: left;
+  top: 40px;
 } 
 
 .roller2 {
@@ -320,32 +311,29 @@ body {
   float: right;
   top: 40px;
   right: 243px;
-  -webkit-animation-name: rotate-again; 
-  -webkit-animation-duration: 1.5s; 
-  -webkit-animation-iteration-count: 3s;
-  -webkit-animation-timing-function: linear;
 }
-
-.roller-spin2 {
-    -webkit-animation-name: rotate; 
-    -webkit-animation-duration: 1.5s; 
-    -webkit-animation-iteration-count: 3s;
-    -webkit-animation-timing-function: linear;
-}
-
-
 
 .rollerbar {
-    padding-left: 240px;
-    width: 520px;
-    height: 980px;
-    float: left;
+  padding-left: 240px;
+  width: 400px;
+  height: 980px;
+  float: left;
 }
 
 .rollerbar2 {
   float: right;
-  width: 520px;
+  width: 400px;
   height: 980px;
   padding-right: 240px;
+}
+
+
+/* Browse Happy */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
