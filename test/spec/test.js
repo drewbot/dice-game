@@ -66,7 +66,7 @@
     $('.button-single').click();
 
     it("should add the returned number to the face-single div", function() {
-      expect(parseInt($('.face-single').text())).to.be.within(1, 100);
+      expect(parseInt($('.face-single').text())).to.be.within(1, 50);
     });
   });
 
@@ -76,7 +76,7 @@
 
     // it("should run a default value if no arguement is passed")
 
-    it("should return a random number between 1 and 100", function() {
+    it("should return a random number between 1 and 50", function() {
       expect(rollDice(50)).to.be.within(1, 50);
     });
 
